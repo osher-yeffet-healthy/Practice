@@ -11,15 +11,9 @@ class ViewController: UIViewController {
     
     lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2)
     
-    //not good
-//    var flipCount = 0 {
-//        didSet{
-//            flipCountLabel.text = "Flips: \(flipCount)"
-//        }
-//    }
     
     func startNewGame(){
-        emojiChoices = ["😊","😇","😎","🤪","🥶","🤬","😴","🥰","🥸"]
+        emojiChoices = Theme.chooseTheme()
         game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2 )
         uptadeViewFromModel()
     }
@@ -60,7 +54,7 @@ class ViewController: UIViewController {
         }
     }
     
-    var emojiChoices = ["😊","😇","😎","🤪","🥶","🤬","😴","🥰","🥸"]
+    var emojiChoices = Theme.chooseTheme()
     var emoji = [Int:String]()
     
     func emoji(for card: Card) -> String{
