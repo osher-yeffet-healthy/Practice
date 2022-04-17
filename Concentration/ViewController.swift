@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     func startNewGame(){
         emojiChoices = ["😊","😇","😎","🤪","🥶","🤬","😴","🥰","🥸"]
         game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2 )
+        uptadeViewFromModel()
     }
     //New
     @IBOutlet weak var ScoreLabel: UILabel!
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
         flipCountLabel.text = "Flips: \(game.flipCounter)"
         ScoreLabel.text = "Score: \(game.score)"
         for index in cardButtons.indices{
-            let button =  cardButtons[index]
+            let button = cardButtons[index]
             let card = game.cards[index]
             if card.isFaceUp {
                 button.setTitle(emoji(for: card), for: UIControl.State.normal)
