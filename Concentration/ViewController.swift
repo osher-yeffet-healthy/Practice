@@ -9,20 +9,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2 )
+    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2)
     
-    var flipCount = 0 {
-        didSet{
-            flipCountLabel.text = "Flips: \(flipCount)"
-        }
+    
+    func startNewGame(){
+        emojiChoices = Theme.chooseTheme()
+        game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1)/2 )
+        uptadeViewFromModel()
     }
-        
+    //New
+    @IBOutlet weak var ScoreLabel: UILabel!
+    
+    //New
+    @IBAction func NewGame(_ sender: UIButton) {
+        startNewGame()
+    }
+    
     @IBOutlet weak var flipCountLabel: UILabel!
     
     @IBOutlet var cardButtons: [UIButton]!
         
     @IBAction func touchCard(_ sender: UIButton) {
-        flipCount += 1
         if let cardNumber = cardButtons.firstIndex(of: sender){
             game.chooseCard(at: cardNumber)
             uptadeViewFromModel()
@@ -32,8 +39,10 @@ class ViewController: UIViewController {
     }
     
     func uptadeViewFromModel(){
+        flipCountLabel.text = "Flips: \(game.flipCounter)"
+        ScoreLabel.text = "Score: \(game.score)"
         for index in cardButtons.indices{
-            let button =  cardButtons[index]
+            let button = cardButtons[index]
             let card = game.cards[index]
             if card.isFaceUp {
                 button.setTitle(emoji(for: card), for: UIControl.State.normal)
@@ -45,7 +54,7 @@ class ViewController: UIViewController {
         }
     }
     
-    var emojiChoices = ["😊","😇","😎","🤪","🥶","🤬","😴","🥰","🥸"]
+    var emojiChoices = Theme.chooseTheme()
     var emoji = [Int:String]()
     
     func emoji(for card: Card) -> String{
