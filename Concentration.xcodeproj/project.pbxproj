@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		676B56B32807F98500DE56DB /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676B56B22807F98500DE56DB /* Concentration.swift */; };
 		676B56B52807FAEE00DE56DB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676B56B42807FAEE00DE56DB /* Card.swift */; };
+		676B56B7280C1CC000DE56DB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676B56B6280C1CC000DE56DB /* Theme.swift */; };
 		6771368F2806F5FC00AFF9E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771368E2806F5FC00AFF9E9 /* AppDelegate.swift */; };
 		677136912806F5FC00AFF9E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677136902806F5FC00AFF9E9 /* SceneDelegate.swift */; };
 		677136932806F5FC00AFF9E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677136922806F5FC00AFF9E9 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		676B56B22807F98500DE56DB /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = SOURCE_ROOT; };
 		676B56B42807FAEE00DE56DB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		676B56B6280C1CC000DE56DB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		6771368B2806F5FC00AFF9E9 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6771368E2806F5FC00AFF9E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		677136902806F5FC00AFF9E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				676B56B42807FAEE00DE56DB /* Card.swift */,
 				677136902806F5FC00AFF9E9 /* SceneDelegate.swift */,
 				677136922806F5FC00AFF9E9 /* ViewController.swift */,
+				676B56B6280C1CC000DE56DB /* Theme.swift */,
 				677136942806F5FC00AFF9E9 /* Main.storyboard */,
 				677136BE2806F61D00AFF9E9 /* New Group */,
 				6771369C2806F5FE00AFF9E9 /* Info.plist */,
@@ -275,6 +278,7 @@
 				677136932806F5FC00AFF9E9 /* ViewController.swift in Sources */,
 				676B56B32807F98500DE56DB /* Concentration.swift in Sources */,
 				676B56B52807FAEE00DE56DB /* Card.swift in Sources */,
+				676B56B7280C1CC000DE56DB /* Theme.swift in Sources */,
 				6771368F2806F5FC00AFF9E9 /* AppDelegate.swift in Sources */,
 				677136912806F5FC00AFF9E9 /* SceneDelegate.swift in Sources */,
 			);
